@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 html {
@@ -23,7 +24,7 @@ padding: ${({padding})=>padding};
 margin-right: ${({marginR})=>marginR};
 margin-left: ${({marginL})=>marginL};
 border: none;
-border-radius: 1px;
+border-radius: 2px;
 font-weight: 600;
 font-size: 18px;
 `

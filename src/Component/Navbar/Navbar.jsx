@@ -1,14 +1,19 @@
 import React from 'react'
-import {MenuIcon, NavButton, NavContainer,NavLogo,NavMenu,NavMenuLinks, NavSm} from './Navbar.Styled'
+import {CloseIcon, MenuIcon, Nav, NavButton, NavContainer,NavLogo,NavMenu,NavMenuLinks, NavMenuLinksSm, NavMenuSmDiv, NavSm, SmButton, SmContainer} from './Navbar.Styled'
 import {MenuData} from '../../Data/Data'
 import { Button } from '../../GlobalStyle/Global.Style'
+import { useState } from 'react'
 
 
 const Navbar = () => {
+    const [toggle,setToggle] = useState(false)
 
+    const HandleToggle = () => setToggle(!toggle)
+    
 
 
   return (
+    <Nav>
     <NavContainer>
          <NavLogo>
             Elixr
@@ -29,11 +34,33 @@ const Navbar = () => {
             >Contact Us</Button>
        </NavButton> 
 
-    <NavSm>
-        <MenuIcon color="#fff" size="25" />
-    </NavSm>    
-
     </NavContainer>
+
+
+    <SmContainer toggle={toggle ? 1:0}>
+        <NavSm>
+        {toggle ? <CloseIcon onClick={HandleToggle} color="#fff" size="25" /> : <MenuIcon onClick={HandleToggle} color="#fff" size="25" /> 
+         }
+        </NavSm>    
+        <NavMenuSmDiv>
+           {MenuData.map((item,index)=>{
+               return (
+                <NavMenuLinksSm key={index}>
+                    {item.title}
+                </NavMenuLinksSm>
+            )
+        })}
+    
+              <SmButton primary={true} padding={"1.6rem 3rem"}>
+                Contact Us
+                </SmButton>
+
+      
+        </NavMenuSmDiv> 
+
+    </SmContainer>
+
+    </Nav>
   )
 }
 
