@@ -3,18 +3,24 @@ import {CloseIcon, MenuIcon, Nav, NavButton, NavContainer,NavLogo,NavMenu,NavMen
 import {MenuData} from '../../Data/Data'
 import { Button } from '../../GlobalStyle/Global.Style'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 
 const Navbar = () => {
     const [toggle,setToggle] = useState(false)
+    const [color,setColor] =useState(false)
 
     const HandleToggle = () => setToggle(!toggle)
     
-
+useEffect(()=>{
+window.addEventListener('scroll',()=>{
+window.scrollY > 60  ? setColor(true) : setColor(false)  ;
+})  
+})
 
   return (
     <Nav>
-    <NavContainer>
+    <NavContainer color={color ? 0 : 1}>
          <NavLogo>
             Elixr
          </NavLogo>
@@ -30,7 +36,8 @@ const Navbar = () => {
          </NavMenu>
 
         <NavButton marginR={"2rem"}>
-            <Button primary={false} padding={"0.8rem 1.6rem"} 
+         
+            <Button  color={color ? 1: 0}  primary={color ? 1: 0 }padding={"0.6rem 1.6rem"} 
             >Contact Us</Button>
        </NavButton> 
 

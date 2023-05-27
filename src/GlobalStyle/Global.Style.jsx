@@ -7,7 +7,6 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
 }
 
 html {
@@ -18,6 +17,7 @@ html {
 
 export const Button = styled.button`
 background: ${({primary})=>(primary ? "#000d1a" : "#CB853F")};
+color:${({color})=>color ? "#fff" : "#000"} ;
 cursor: pointer;
 transition: all 0.3s ease ;
 padding: ${({padding})=>padding};

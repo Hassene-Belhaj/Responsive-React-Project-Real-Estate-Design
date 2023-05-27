@@ -8,16 +8,18 @@ export const Nav = styled.nav`
 width: 100%;
 height: 100%;
 position: relative;
+z-index: 700;
 `
 
 
 export  const NavContainer = styled.div`
 width: 100%;
 height: 60px;
-background: #000;
+background:${({color})=>color ? "transparent" : "#CB853F" };
 display: flex;
 justify-content: space-between;
 align-items: center;
+position: fixed;
 ` 
 export  const NavLogo = styled(Link)`
 width: 30%;
@@ -33,7 +35,7 @@ z-index: 700;
 export  const NavMenu = styled.div`
 width: 40%;
 @media screen and (max-width : 768px){
-    display: none;
+display: none;
 }
 
 `
@@ -99,6 +101,8 @@ display: none;
     bottom:0;
     z-index: 200;
     transition: all .4s ease-in-out;
+    overflow: hidden;
+
 }
 `
 
