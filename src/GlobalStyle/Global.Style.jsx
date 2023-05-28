@@ -16,15 +16,17 @@ html {
 `
 
 export const Button = styled.button`
-background: ${({primary})=>(primary ? "#000d1a" : "#CB853F")};
+background: ${({background})=>(background ? "#000d1a" : "#CB853F")};
 color:${({color})=>color ? "#fff" : "#000"} ;
 cursor: pointer;
 transition: all 0.3s ease ;
 padding: ${({padding})=>padding};
 margin-right: ${({marginR})=>marginR};
 margin-left: ${({marginL})=>marginL};
+margin-top: ${({marginT})=>marginT};
+margin-bottom: ${({marginB})=>marginB};
 border: none;
 border-radius: 2px;
-font-weight: 600;
 font-size: 18px;
+font-weight: 600;
 `

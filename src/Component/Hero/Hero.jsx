@@ -1,25 +1,23 @@
-import React from 'react'
-import {ContainerSlider,HeroSlider, NextBtn, NextSlide, PrevBtn, PrevSlide,} 
+import React, { } from 'react'
+import {ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
 from './Hero.Style'
 import { useState } from 'react'
-import styled from 'styled-components'
+import { Button } from '../../GlobalStyle/Global.Style'
+import { useEffect } from 'react'
 
 const Hero = ({SliderData}) => {
 
+
   const [currentIndex,setCurrentIndex] = useState(0)
 
-  const ContainerSlider = styled.div`
-  height: 100vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ), url(${SliderData[currentIndex].image});
-  background-position: center;
-  background-size: cover;
-  opacity: 1;
-  ` 
-
-
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      nextSlide()
+    }, 2600)
+ 
+    return () => clearTimeout(timeout)
+    
+}, [currentIndex])
 
 
 
@@ -38,13 +36,22 @@ const nextSlide = () => {
 
 
   return (
-      <ContainerSlider>
+      <ContainerSlider img={`url(${SliderData[currentIndex].image})`}>
          <NextBtn> 
             <NextSlide onClick={nextSlide} size={40} />
           </NextBtn>
          <PrevBtn> 
            <PrevSlide onClick={prevSlide} size={40} />
           </PrevBtn>
+            
+           <TextHero>
+                <h2 style={{paddingBottom:"2rem",fontWeight:"400"}}>{SliderData[currentIndex].title}</h2>
+                <h3>{SliderData[currentIndex].price}</h3>
+                <Button padding={"1rem 2rem"} marginT={"2rem"}>View Home</Button>
+         
+           </TextHero>
+
+      
       </ContainerSlider>
   )
 }

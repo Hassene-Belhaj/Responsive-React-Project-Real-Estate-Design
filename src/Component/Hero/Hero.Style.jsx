@@ -1,27 +1,21 @@
 import  styled  from 'styled-components'
 import {AiOutlineArrowRight} from 'react-icons/Ai'
 import {AiOutlineArrowLeft} from 'react-icons/Ai'
-import { SliderData } from '../../Data/SliderData'
 
 
 
 
 export const ContainerSlider = styled.div`
+width: 100%;
 height: 100vh;
-background: linear-gradient(
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8)
-  ), url(${SliderData[3].image});
+background-image:${({img})=>img};
 background-position: center;
 background-size: cover;
-opacity: 1;
+transition: all 0.3s ease-in-out;
 ` 
 
-export const HeroSlider = styled.div`
-width: 100%;
-height: 100%;
-transition: all 0.5s ease-in-out;
-`
+
+
 
 export const NextBtn = styled.span`
 position: absolute;
@@ -57,4 +51,25 @@ fill: #fff;
 export const NextSlide = styled(AiOutlineArrowRight)`
 z-index: 300;
 fill: #fff;
+`
+export const TextHero = styled.div`
+background: rgba(0,0,0,0.2);
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: flex-start;
+position: absolute;
+top: 0;
+bottom: 0;
+padding-left:3rem ;
+text-transform: uppercase;
+font-family: "Montserrat",sans-serif;
+color: #fff;
+font-size: 1.3rem;
+font-weight: 100;
+@media screen and (max-width : 768px) {
+ width :100% ;
+}
 `

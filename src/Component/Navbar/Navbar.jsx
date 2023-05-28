@@ -58,7 +58,7 @@ window.scrollY > 60  ? setColor(true) : setColor(false)  ;
             )
         })}
     
-              <SmButton primary={true} padding={"1.6rem 3rem"}>
+              <SmButton padding={"1.6rem 3rem"}>
                 Contact Us
                 </SmButton>
 

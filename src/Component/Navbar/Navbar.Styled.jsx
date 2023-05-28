@@ -131,6 +131,7 @@ margin-bottom: 3rem;
 
 
 export const SmButton = styled(Button)`
+background: #000d1a;
 display: block;
 color: #fff;
 border-radius: 2px;
