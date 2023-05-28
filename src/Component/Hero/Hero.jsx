@@ -1,11 +1,26 @@
-import React, { useEffect } from 'react'
-import {HeroContainer, HeroSlider, NextBtn, NextSlide, PrevBtn, PrevSlide,} 
+import React from 'react'
+import {ContainerSlider,HeroSlider, NextBtn, NextSlide, PrevBtn, PrevSlide,} 
 from './Hero.Style'
 import { useState } from 'react'
-import { SliderData } from '../../Data/SliderData'
+import styled from 'styled-components'
 
-const Hero = () => {
-const [currentIndex,setCurrentIndex] = useState(0)
+const Hero = ({SliderData}) => {
+
+  const [currentIndex,setCurrentIndex] = useState(0)
+
+  const ContainerSlider = styled.div`
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url(${SliderData[currentIndex].image});
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  ` 
+
+
+
 
 
 
@@ -23,16 +38,14 @@ const nextSlide = () => {
 
 
   return (
-    <HeroContainer >
-        <HeroSlider style={{background:`no-repeat center url(${SliderData[currentIndex].image})`,backgroundSize:"cover"}}>
+      <ContainerSlider>
          <NextBtn> 
             <NextSlide onClick={nextSlide} size={40} />
           </NextBtn>
          <PrevBtn> 
            <PrevSlide onClick={prevSlide} size={40} />
           </PrevBtn>
-        </HeroSlider>
-    </HeroContainer>
+      </ContainerSlider>
   )
 }
 

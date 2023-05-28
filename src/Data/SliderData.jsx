@@ -1,10 +1,11 @@
+
 export const SliderData = [
     {
         title:'Luxury villa in Bali ,Indonesia',
         price : '$4,280,200',
         path : '/homes',
         label : 'View Home',
-        image :'./images/house1.jpg',
+        image :'/images/house4.jpg',
         alt: 'house'
     },
     {
@@ -12,7 +13,7 @@ export const SliderData = [
         price : '$3,200,000',
         path : '/homes',
         label : 'View Home',
-        image :'/images/house2.jpg',
+        image :'/images/house3.jpg',
         alt: 'house'
     },
     {
@@ -20,7 +21,7 @@ export const SliderData = [
         price : '$7,000,000',
         path : '/homes',
         label : 'View Home',
-        image :'./images/house3.jpg',
+        image :'/images/house2.jpg',
         alt: 'house'
     },
     {
@@ -28,7 +29,7 @@ export const SliderData = [
         price : '$10,800,000',
         path : '/homes',
         label : 'View Home',
-        image :'./images/house4.jpg',
+        image :'/images/house1.jpg',
         alt: 'house'
     },
 
