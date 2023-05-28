@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { CgMenuRight} from 'react-icons/cg'
-import { AiOutlineClose} from 'react-icons/Ai'
+import { AiOutlineClose} from 'react-icons/ai'
 import { Button } from '../../GlobalStyle/Global.Style'
 
 export const Nav = styled.nav`
