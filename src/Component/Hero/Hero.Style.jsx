@@ -3,7 +3,10 @@ import {AiOutlineArrowRight} from 'react-icons/Ai'
 import {AiOutlineArrowLeft} from 'react-icons/Ai'
 
 
-
+export const Container = styled.div`
+width: 100%;
+height: 100vh;
+` 
 
 export const ContainerSlider = styled.div`
 width: 100%;
@@ -53,7 +56,7 @@ z-index: 300;
 fill: #fff;
 `
 export const TextHero = styled.div`
-background: rgba(0,0,0,0.2);
+background: rgba(0,0,0,0.3);
 width: 100%;
 height: 100vh;
 display: flex;
@@ -63,13 +66,20 @@ align-items: flex-start;
 position: absolute;
 top: 0;
 bottom: 0;
-padding-left:3rem ;
 text-transform: uppercase;
 font-family: "Montserrat",sans-serif;
+font-size: 1.2rem;
 color: #fff;
-font-size: 1.3rem;
 font-weight: 100;
-@media screen and (max-width : 768px) {
- width :100% ;
+h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-left: 2rem;
+}
+h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-left: 2rem;
 }
 `

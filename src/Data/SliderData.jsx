@@ -21,7 +21,7 @@ export const SliderData = [
         price : '$7,000,000',
         path : '/homes',
         label : 'View Home',
-        image :'/images/house2.jpg',
+        image :'/images/house5.jpg',
         alt: 'house'
     },
     {

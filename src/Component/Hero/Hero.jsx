@@ -1,23 +1,24 @@
 import React, { } from 'react'
-import {ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
+import {Container, ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
 from './Hero.Style'
 import { useState } from 'react'
 import { Button } from '../../GlobalStyle/Global.Style'
 import { useEffect } from 'react'
+import InfoSection from '../InfoSection/InfoSection'
 
 const Hero = ({SliderData}) => {
 
 
   const [currentIndex,setCurrentIndex] = useState(0)
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      nextSlide()
-    }, 2600)
+//   useEffect(() => {
+//     const timeout = setTimeout(() => {
+//       nextSlide()
+//     }, 2600)
  
-    return () => clearTimeout(timeout)
+//     return () => clearTimeout(timeout)
     
-}, [currentIndex])
+// }, [currentIndex])
 
 
 
@@ -36,6 +37,7 @@ const nextSlide = () => {
 
 
   return (
+    <Container>
       <ContainerSlider img={`url(${SliderData[currentIndex].image})`}>
          <NextBtn> 
             <NextSlide onClick={nextSlide} size={40} />
@@ -45,14 +47,12 @@ const nextSlide = () => {
           </PrevBtn>
             
            <TextHero>
-                <h2 style={{paddingBottom:"2rem",fontWeight:"400"}}>{SliderData[currentIndex].title}</h2>
+                <h2>{SliderData[currentIndex].title}</h2>
                 <h3>{SliderData[currentIndex].price}</h3>
-                <Button padding={"1rem 2rem"} marginT={"2rem"}>View Home</Button>
-         
+                <Button padding={"1rem 2rem"} marginT={"2rem"} marginL={"2rem"}>View Home</Button>
            </TextHero>
-
-      
       </ContainerSlider>
+    </Container>
   )
 }
 
