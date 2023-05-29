@@ -2,9 +2,9 @@ import React, { } from 'react'
 import {Container, ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
 from './Hero.Style'
 import { useState } from 'react'
-import { Button } from '../../GlobalStyle/Global.Style'
 import { useEffect } from 'react'
 import InfoSection from '../InfoSection/InfoSection'
+import { Button } from '../../Button/Button.Style'
 
 const Hero = ({SliderData}) => {
 

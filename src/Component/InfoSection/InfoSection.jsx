@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, GridContainer, LeftColumn,RightColumn } from './InfoSection.Style'
+import { Button } from '../../Button/Button.Style'
 
 const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}) => {
     return (
@@ -9,6 +10,8 @@ const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}
        <LeftColumn order={order ? 1 : 0}>
         <h2>{heading}</h2>
          <p>{paragraphone}</p>
+         <Button background={true} color={true} padding={"1rem 2rem"} marginT={"2rem"} marginB={"2rem"} marginL={"2rem"}>View Homes</Button>
+
         </LeftColumn>
 
         <RightColumn order={order ? 1 : 0}>

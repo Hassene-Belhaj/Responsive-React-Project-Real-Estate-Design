@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { CgMenuRight} from 'react-icons/cg'
 import { AiOutlineClose} from 'react-icons/ai'
-import { Button } from '../../GlobalStyle/Global.Style'
+import { Button } from '../../Button/Button.Style'
 
 export const Nav = styled.nav`
 width: 100%;

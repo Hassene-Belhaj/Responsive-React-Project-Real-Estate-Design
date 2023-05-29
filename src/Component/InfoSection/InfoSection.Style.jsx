@@ -3,19 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
 width: 100%;
 height: 100vh;
-background:black;
-display: flex;
-justify-content: center;
-margin:auto;
-margin: 10rem 0;
+@media screen and (max-width : 768px) {
+}
 `
 
 export const GridContainer = styled.div`
-width: 100%;
+margin-top: 5rem;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
 height: 100%;
 display:grid;
 background: #fff;
-padding: 0  5rem ;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 100%;
 gap: 2rem;
@@ -28,6 +27,10 @@ export const LeftColumn = styled.div`
 width: 100%;
 height: 100%;
 display: flex;
+padding: 0 2rem;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -47,13 +50,14 @@ export const RightColumn = styled.div`
 width: 100%;
 height: 100%;
 display: flex;
+margin-left: auto;
+margin-right: auto;
 justify-content: center;
 align-items: center;
 order: ${({order})=>order ? "2" : "1"};
 img {
-    width: 100%;
-    max-width:700px ;
-    object-fit: cover;
+width: 100%;
+max-width:600px ;
 }
 
 `

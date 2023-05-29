@@ -1,9 +1,9 @@
 import React from 'react'
 import {CloseIcon, MenuIcon, Nav, NavButton, NavContainer,NavLogo,NavMenu,NavMenuLinks, NavMenuLinksSm, NavMenuSmDiv, NavSm, SmButton, SmContainer} from './Navbar.Styled'
 import {MenuData} from '../../Data/Data'
-import { Button } from '../../GlobalStyle/Global.Style'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { Button } from '../../Button/Button.Style'
 
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ window.scrollY > 60  ? setColor(true) : setColor(false)  ;
 
         <NavButton marginR={"2rem"}>
          
-            <Button  color={color ? 1: 0}  primary={color ? 1: 0 }padding={"0.6rem 1.6rem"} 
+            <Button  color={color ? 1: 0}  background={color ? 1: 0 }padding={"0.6rem 1.6rem"} 
             >Contact Us</Button>
        </NavButton> 
 
