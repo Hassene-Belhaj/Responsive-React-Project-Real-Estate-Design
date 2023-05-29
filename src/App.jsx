@@ -7,6 +7,7 @@ import { SliderData } from './Data/SliderData'
 import InfoSection from './Component/InfoSection/InfoSection'
 import { InfoData } from './Data/InfoData'
 import { InfoSectionStyleOne } from './Data/Data.Style'
+import InfoSectionTwo from './Component/InfoSectionTwo/InfoSectionTwo'
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
       <Navbar />
       <Hero SliderData={SliderData} />
       <InfoSection  {...InfoData}  {...InfoSectionStyleOne}/>
+      <InfoSectionTwo />
     </Router>
   </>   
   
