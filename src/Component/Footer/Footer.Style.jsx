@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {FaYoutube,FaInstagram,FaFacebook,FaLinkedin} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+
 export const Container = styled.footer`
 width: 100%;
 height: 60vh;
