@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 width: 100%;
 height: 100vh;
+margin-top: 5rem;
 @media screen and (max-width : 768px) {
 }
 `
@@ -15,11 +16,12 @@ width: 80%;
 height: 100%;
 display:grid;
 background: #fff;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 50% 50%;
 grid-template-rows: 100%;
 gap: 2rem;
 @media screen and (max-width :768px){
-grid-template-columns    :1fr;
+grid-template-columns    :100%;
+
 }
 `
 
@@ -27,7 +29,7 @@ export const LeftColumn = styled.div`
 width: 100%;
 height: 100%;
 display: flex;
-padding: 0 2rem;
+padding: 0 1rem;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
@@ -43,6 +45,10 @@ p{
     margin-top: 2rem;
     font-size: 1.3rem;
     line-height: 2rem;
+}
+
+@media screen and (max-width :768px){
+
 }
 `
 

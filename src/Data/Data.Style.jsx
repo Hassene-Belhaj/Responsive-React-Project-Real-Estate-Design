@@ -1,7 +1,7 @@
 export const InfoSectionStyleOne = {
-    order: true,
+    order: false,
 }
 
 export const InfoSectionStyleTwo = {
-    order: false,
+    order: true,
 }
