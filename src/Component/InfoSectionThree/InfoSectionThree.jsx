@@ -13,11 +13,11 @@ const InfoSectionThree = () => {
 
      <LeftColumn>
       <h3>Stunning Interior</h3> 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, odio quod libero accusantium blanditiis dolores nobis est tempore mollitia dicta illo adipisci fugit sapiente consequuntur modi consequatur suscipit itaque eveniet magnam eius? Neque laudantium iure nisi vitae, eaque eligendi aspernatur doloribus laboriosam asperiores amet quis nesciunt consequatur sit harum voluptatem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, odio quod libero accusantium blanditiis dolores nobis est tempore mollitia dicta illo adipisci !</p>
       <Button marginT={"1.5rem"} padding={"0.8rem 1.6rem"}> Learn More</Button>
      </LeftColumn>
      <RightColumn>
-      <img src="" alt="" />
+      <img src={'/images/design1.jpg'} alt="" />
      </RightColumn>
      
 

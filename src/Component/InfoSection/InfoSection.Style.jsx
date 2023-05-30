@@ -4,6 +4,7 @@ export const Container = styled.div`
 width: 100%;
 height: 100vh;
 margin-top: 5rem;
+margin-bottom: 5rem;
 @media screen and (max-width : 768px) {
 }
 `
@@ -64,6 +65,9 @@ order: ${({order})=>order ? "2" : "1"};
 img {
 width: 100%;
 max-width:600px ;
+height: 100%;
+height: 700px;
+object-fit: cover;
 }
 
 `

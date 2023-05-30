@@ -14,4 +14,10 @@ border: none;
 border-radius: 2px;
 font-size: 18px;
 font-weight: 600;
+transition: all 0.3s ease;
+&:hover{
+    transform: scale(1.07);
+    transition: all 0.3s ease;
+
+}
 `
