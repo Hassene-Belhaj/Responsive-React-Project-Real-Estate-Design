@@ -60,7 +60,6 @@ background-color: #000;
 display: flex;
 justify-content: center;
 flex-direction: column;
-align-items: center;
 color: #fff;
 display: flex;
 @media screen and (max-width : 768px) {
@@ -98,6 +97,7 @@ fill:#CB853F;
 `
 
 export const BlockContainer = styled.div`
+padding-top: 1rem;
 display: flex;
 width: 400px;
 height: auto;
@@ -128,12 +128,17 @@ font-size:1.3rem;
 export const BlockOne = styled.div`
 display: flex;
 flex-direction: column;
+@media screen and (max-width:768px) {
+      margin-top: 2rem;
+}
 `
 
 export const BlockTwo = styled.div`
-margin-top: 5rem;
 display: flex;
 flex-direction: column;
+@media screen and (max-width:768px) {
+      margin-top: 2rem;
+}
 `
 export const FooterLink = styled(Link)`
 line-height: 4rem;

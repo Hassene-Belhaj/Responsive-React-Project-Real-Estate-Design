@@ -1,32 +1,21 @@
 import React from 'react'
-import { Container, Grid, ImageContainer,  } from './PhotoSection.Style'
+import { Container, DivImage, Grid } from './PhotoSection.Style'
 
-const PhotoSection = () => {
+
+const PhotoSection = ({PhotoSectionData}) => {
   return (
-    <Container>
+      <Container>
+         {/* <h3>Contemporary Design</h3> */}
        <Grid>
-       <ImageContainer>
-         <img src={'/images/house1.jpg'} alt="" />
-       </ImageContainer>
-       <ImageContainer>
-         <img src={'/images/house1.jpg'} alt="" />
-       </ImageContainer>
-       <ImageContainer>
-         <img src={'/images/house1.jpg'} alt="" />
-       </ImageContainer>
-       <ImageContainer>
-         <img src={'/images/house1.jpg'} alt="" />
-       </ImageContainer>
-       <ImageContainer>
-         <img src={'/images/house1.jpg'} alt="" />
-       </ImageContainer>
-       <ImageContainer>
-         <img src={'/images/house1.jpg'} alt="" />
-       </ImageContainer>
- 
-        
+          {PhotoSectionData.map((photo,index)=>{
+            return (
+              <DivImage key={index}>
+                   <img src={photo.image} alt="" />
+             </DivImage>  
+            )
+          })}
        </Grid>
-    </Container>
+          </Container>
     )
 }
 

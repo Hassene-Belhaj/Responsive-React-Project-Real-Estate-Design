@@ -10,6 +10,7 @@ import { InfoSectionStyleOne, InfoSectionStyleTwo } from './Data/Data.Style'
 import InfoSectionTwo from './Component/InfoSectionTwo/InfoSectionTwo'
 import InfoSectionThree from './Component/InfoSectionThree/InfoSectionThree'
 import Footer from './Component/Footer/Footer'
+import { PhotoSectionData } from './Data/Data'
 import PhotoSection from './Component/PhotoSection/PhotoSection'
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
       <InfoSection  {...InfoData}  {...InfoSectionStyleOne}/>
       <InfoSectionThree />
       <InfoSection  {...InfoDataTwo}  {...InfoSectionStyleTwo}/>
-      <PhotoSection />
+      <PhotoSection PhotoSectionData={PhotoSectionData} />
       <Footer/>
       
     </Router>
