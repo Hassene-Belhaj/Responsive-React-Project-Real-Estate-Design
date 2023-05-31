@@ -42,7 +42,7 @@ Control.start('visible')
         transition ={{duration : 2}} 
         >
           <Span>
-          <h2>Contemporary Design</h2>
+          <h2>interior design styles</h2>
           </Span>
        <Grid>
           {PhotoSectionData.map((photo,index)=>{

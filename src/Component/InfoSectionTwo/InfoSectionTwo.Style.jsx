@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
-height: 100vh;
+height: 100%;
 margin-top: 5rem;
+margin-bottom: 5rem;
 @media screen and (max-width:768px) {
-margin-top: 48rem;
+margin-top: 58rem;
+margin-bottom: 58rem;
 }
 `
 
@@ -21,7 +23,6 @@ gap: 2rem;
 @media screen and (max-width : 768px){
 grid-template-columns    :100% ;
 grid-template-rows: 100%;
-
 }
 `
 export const LeftColmun = styled.div`

@@ -7,11 +7,12 @@ import { SliderData } from './Data/SliderData'
 import InfoSection from './Component/InfoSection/InfoSection'
 import { InfoData, InfoDataTwo } from './Data/InfoData'
 import { InfoSectionStyleOne, InfoSectionStyleTwo } from './Data/Data.Style'
-import InfoSectionTwo from './Component/InfoSectionTwo/InfoSectionTwo'
 import InfoSectionThree from './Component/InfoSectionThree/InfoSectionThree'
 import Footer from './Component/Footer/Footer'
 import { PhotoSectionData } from './Data/Data'
 import PhotoSection from './Component/PhotoSection/PhotoSection'
+import InfoSectionTwo from './Component/InfoSectionTwo/InfoSectionTwo'
+import AboutUs from './Pages/AboutUs'
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
       <Hero SliderData={SliderData} />
       <InfoSection  {...InfoData}  {...InfoSectionStyleOne}/>
       <InfoSectionThree />
+       <InfoSectionTwo />
       <InfoSection  {...InfoDataTwo}  {...InfoSectionStyleTwo}/>
       <PhotoSection PhotoSectionData={PhotoSectionData} />
       <Footer/>  

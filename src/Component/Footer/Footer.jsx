@@ -4,7 +4,7 @@ import { BlockContainer, BlockOne, BlockTwo, Container, FooterLink, GridColumn, 
 
 const Footer = () => {
   return (
-   <Container>
+   <Container className="footer">
        <GridColumn>
             <LeftColumn>
                 <h4>Let's Find <br/>Your Dream Home</h4>
