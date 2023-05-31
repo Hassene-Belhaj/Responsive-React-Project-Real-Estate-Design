@@ -16,8 +16,8 @@ font-size: 18px;
 font-weight: 600;
 transition: all 0.3s ease;
 &:hover{
-    transform: scale(1.07);
+    transform: scale(1.05);
+    /* transform: rotate(3deg); */
     transition: all 0.3s ease;
-
 }
 `

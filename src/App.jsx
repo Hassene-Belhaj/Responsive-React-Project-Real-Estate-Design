@@ -27,8 +27,7 @@ const App = () => {
       <InfoSectionThree />
       <InfoSection  {...InfoDataTwo}  {...InfoSectionStyleTwo}/>
       <PhotoSection PhotoSectionData={PhotoSectionData} />
-      <Footer/>
-      
+      <Footer/>  
     </Router>
   </>   
   
