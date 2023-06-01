@@ -1,40 +1,38 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {CloseIcon, MenuIcon, Nav, NavButton, NavContainer,NavLogo,NavMenu,NavMenuLinks, NavMenuLinksSm, NavMenuSmDiv, NavSm, SmButton, SmContainer} from './Navbar.Styled'
 import {MenuData} from '../../Data/Data'
 import { useState } from 'react'
-import { useEffect } from 'react'
 import { Button } from '../../Button/Button.Style'
 import { useLocation } from 'react-router-dom'
 
 
 const Navbar = () => {
     const [toggle,setToggle] = useState(false)
-    const [color,setColor] =useState(true)
-    const [navcolor,setNavColor] = useState(false)
-
+    const [color,setColor] =useState(false)
 
     const HandleToggle = () => setToggle(!toggle)
 
 
-
 const location = useLocation()
 
+useEffect(()=>{
+ if(location.pathname === '/')  {
+  window.addEventListener('scroll',()=>{
+  window.scrollY > 60  ? setColor(true) : setColor(false);
+})
+} else {
+  setColor(true)
+}
 
-
+})
 
 
     
-useEffect(()=>{
-  if(window.location.pathname == '/' ){
-     window.addEventListener('scroll',()=>{
-     window.scrollY > 60  ? setColor(true) : setColor(false);
-   })
-}
-},[location])
+
 
   return (
     <Nav>
-    <NavContainer color={color ? 0 : 1 }>
+    <NavContainer color={color ? 0 : 1}>
          <NavLogo to={'/'}>
             Elixr
          </NavLogo>
