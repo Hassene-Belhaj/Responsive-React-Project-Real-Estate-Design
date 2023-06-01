@@ -16,7 +16,8 @@
     "react-icons": "^4.8.0",
     "react-router": "^6.11.2",
     "react-router-dom": "^6.11.2",
-    "styled-components": "^5.3.11"
+    "styled-components": "^5.3.11",
+    "use-local-storage": "^3.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

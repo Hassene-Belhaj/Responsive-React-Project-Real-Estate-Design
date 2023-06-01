@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
-height: 100%;
-margin-top: 5rem;
-margin-bottom: 5rem;
+height: 100vh;
 @media screen and (max-width:768px) {
 margin-top: 58rem;
 margin-bottom: 58rem;

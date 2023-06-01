@@ -4,7 +4,7 @@ import { Button } from '../../Button/Button.Style'
 
 const InfoSectionTwo = () => {
   return (
-    <Container>
+    <Container >
         <GridContainer>
             <LeftColmun>
                 <img src={'/images/home1.jpg'} alt="" />

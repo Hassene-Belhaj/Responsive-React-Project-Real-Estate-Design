@@ -4,23 +4,37 @@ import {MenuData} from '../../Data/Data'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { Button } from '../../Button/Button.Style'
+import { useLocation } from 'react-router-dom'
 
 
 const Navbar = () => {
     const [toggle,setToggle] = useState(false)
-    const [color,setColor] =useState(false)
+    const [color,setColor] =useState(true)
+    const [navcolor,setNavColor] = useState(false)
+
 
     const HandleToggle = () => setToggle(!toggle)
+
+
+
+const location = useLocation()
+
+
+
+
+
     
 useEffect(()=>{
-window.addEventListener('scroll',()=>{
-window.scrollY > 60  ? setColor(true) : setColor(false)  ;
-})  
-})
+  if(window.location.pathname == '/' ){
+     window.addEventListener('scroll',()=>{
+     window.scrollY > 60  ? setColor(true) : setColor(false);
+   })
+}
+},[location])
 
   return (
     <Nav>
-    <NavContainer color={color ? 0 : 1}>
+    <NavContainer color={color ? 0 : 1 }>
          <NavLogo to={'/'}>
             Elixr
          </NavLogo>

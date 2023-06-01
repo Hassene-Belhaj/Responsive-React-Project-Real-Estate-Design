@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { CgMenuRight} from 'react-icons/cg'
-import { AiOutlineClose} from 'react-icons/ai'
+import { MdOutlineClose} from 'react-icons/md'
 import { Button } from '../../Button/Button.Style'
 
 export const Nav = styled.nav`
@@ -76,7 +76,7 @@ margin-right: 2rem;
 }
 `
 
-export const CloseIcon = styled(AiOutlineClose)`
+export const CloseIcon = styled(MdOutlineClose)`
 display: none;
 @media screen and (max-width:768px){
 display :block ;

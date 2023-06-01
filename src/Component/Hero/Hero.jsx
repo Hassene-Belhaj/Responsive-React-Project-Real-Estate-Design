@@ -1,9 +1,6 @@
-import React, { } from 'react'
+import React, {useEffect, useState } from 'react'
 import {Container, ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
 from './Hero.Style'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import InfoSection from '../InfoSection/InfoSection'
 import { Button } from '../../Button/Button.Style'
 
 const Hero = ({SliderData}) => {
@@ -11,14 +8,14 @@ const Hero = ({SliderData}) => {
 
   const [currentIndex,setCurrentIndex] = useState(0)
 
-//   useEffect(() => {
-//     const timeout = setTimeout(() => {
-//       nextSlide()
-//     }, 2600)
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      nextSlide()
+    }, 2600)
  
-//     return () => clearTimeout(timeout)
+    return () => clearTimeout(timeout)
     
-// }, [currentIndex])
+}, [currentIndex])
 
 
 
