@@ -2,17 +2,9 @@ import React from 'react'
 import { GlobalStyle } from './GlobalStyle/Global.Style'
 import Navbar from './Component/Navbar/Navbar'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
-import Hero from './Component/Hero/Hero'
-import { SliderData } from './Data/SliderData'
-import InfoSection from './Component/InfoSection/InfoSection'
-import { InfoData, InfoDataTwo } from './Data/InfoData'
-import { InfoSectionStyleOne, InfoSectionStyleTwo } from './Data/Data.Style'
-import InfoSectionThree from './Component/InfoSectionThree/InfoSectionThree'
 import Footer from './Component/Footer/Footer'
-import { PhotoSectionData } from './Data/Data'
-import PhotoSection from './Component/PhotoSection/PhotoSection'
-import InfoSectionTwo from './Component/InfoSectionTwo/InfoSectionTwo'
-import AboutUs from './Pages/AboutUs'
+import Home from './Component/Home/Home'
+
 
 const App = () => {
 
@@ -23,12 +15,7 @@ const App = () => {
     <Router>
       <GlobalStyle />
       <Navbar />
-      <Hero SliderData={SliderData} />
-      <InfoSection  {...InfoData}  {...InfoSectionStyleOne}/>
-      <InfoSectionThree />
-       <InfoSectionTwo />
-      <InfoSection  {...InfoDataTwo}  {...InfoSectionStyleTwo}/>
-      <PhotoSection PhotoSectionData={PhotoSectionData} />
+       <Home />
       <Footer/>  
     </Router>
   </>   

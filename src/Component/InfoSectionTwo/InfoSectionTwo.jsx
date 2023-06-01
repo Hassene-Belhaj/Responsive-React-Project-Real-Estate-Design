@@ -12,7 +12,7 @@ const InfoSectionTwo = () => {
                 <h3>8 bed 10 bath house in venice , california</h3>
                </TitleDiv>
                <Span>
-               <Button background={true} color={true} padding={"1rem 2rem"}>View Home</Button>
+               <Button background={true} color="true" padding={"1rem 2rem"}>View Home</Button>
                </Span>
             </LeftColmun>
             <RightColmun>
@@ -21,7 +21,7 @@ const InfoSectionTwo = () => {
                 <h3>4 bed 2 bath house in miami , florida</h3>
                </TitleDiv>
                <Span>
-               <Button background={true} color={true} padding={"1rem 2rem"} >View Home</Button>
+               <Button background={true} color="true" padding={"1rem 2rem"} >View Home</Button>
                </Span>
             </RightColmun>
 

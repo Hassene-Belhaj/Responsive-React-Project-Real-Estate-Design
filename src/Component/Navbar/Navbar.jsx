@@ -4,7 +4,6 @@ import {MenuData} from '../../Data/Data'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { Button } from '../../Button/Button.Style'
-import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -22,7 +21,7 @@ window.scrollY > 60  ? setColor(true) : setColor(false)  ;
   return (
     <Nav>
     <NavContainer color={color ? 0 : 1}>
-         <NavLogo Link to={'/'}>
+         <NavLogo to={'/'}>
             Elixr
          </NavLogo>
 
