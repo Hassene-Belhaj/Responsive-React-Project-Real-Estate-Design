@@ -4,13 +4,11 @@ export const Container = styled.div`
 width: 100%;
 height :100%;
 margin: 0;
-margin-top: 15rem;
-margin-bottom: 15rem;
+margin-top: 5rem;
+margin-bottom: 5rem;
 text-align: center;
 @media screen and (max-width: 768px) {
-margin: 0 ;
-margin-top    : 58rem;
-margin-bottom: -48rem;
+
 }
 
 
@@ -18,12 +16,11 @@ margin-bottom: -48rem;
 
 
 export const Grid = styled.div`
-margin-top: 5rem;
 width: 100%;
 height: 100%;
 display: grid;
 grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-grid-row: 500px;
+grid-row: 400px;
 gap: 2rem;
 `
 
@@ -33,6 +30,7 @@ width: 100%;
 height: 20%;
 margin:auto;
 h2{
+    padding: 5rem 0;
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
@@ -48,7 +46,6 @@ margin: auto;
 display: flex;
 justify-content: center;
 align-items: center;
-
 :nth-child(1){
 grid-column: span 2;
 grid-row: span 2;

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, GridContainer, LeftColumn,RightColumn } from './InfoSection.Style'
 import { Button } from '../../Button/Button.Style'
-import { motion } from 'framer-motion'
 const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}) => {
     return (
     <Container>

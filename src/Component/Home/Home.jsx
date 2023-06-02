@@ -9,7 +9,6 @@ import {InfoDataTwo} from '../../Data/InfoData'
 import { InfoSectionStyleOne, InfoSectionStyleTwo } from '../../Data/Data.Style'
 import  PhotoSection from '../PhotoSection/PhotoSection'
 import { PhotoSectionData } from '../../Data/Data'
-import Navbar from '../Navbar/Navbar'
 
 const Home = () => {
   return (

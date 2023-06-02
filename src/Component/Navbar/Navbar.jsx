@@ -8,15 +8,17 @@ import { useLocation } from 'react-router-dom'
 
 const Navbar = () => {
     const [toggle,setToggle] = useState(false)
-    const [color,setColor] =useState(false)
+    const [color,setColor] =useState(null)
 
     const HandleToggle = () => setToggle(!toggle)
+    const HandleClose = () =>setToggle(!toggle)
 
 
 const location = useLocation()
 
+
 useEffect(()=>{
- if(location.pathname === '/')  {
+ if(location.pathname === '/')   {
   window.addEventListener('scroll',()=>{
   window.scrollY > 60  ? setColor(true) : setColor(false);
 })
@@ -40,7 +42,7 @@ useEffect(()=>{
          <NavMenu>
           {MenuData.map((item,index)=>{
             return (
-            <NavMenuLinks to={item.link} key={index}>
+            <NavMenuLinks  to={item.link} key={index}>
                 {item.title}
             </NavMenuLinks>
             )
@@ -64,7 +66,7 @@ useEffect(()=>{
         <NavMenuSmDiv>
            {MenuData.map((item,index)=>{
                return (
-                <NavMenuLinksSm key={index}>
+                <NavMenuLinksSm onClick={HandleClose} to={item.link} key={index}>
                     {item.title}
                 </NavMenuLinksSm>
             )

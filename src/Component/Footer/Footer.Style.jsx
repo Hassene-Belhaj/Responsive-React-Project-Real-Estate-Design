@@ -6,8 +6,8 @@ export const Container = styled.footer`
 width: 100%;
 height: 60vh;
 @media screen and (max-width : 768px){
-margin-top    :58rem ;
-height: 100vh;
+margin-top :5rem ;
+height: 100%;
 }
 `
 export const GridColumn = styled.div`
@@ -34,7 +34,7 @@ flex-direction: column;
 justify-content: center;
 padding-top: 10rem;
 h4{
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 @media screen and (max-width:1384px) {
@@ -105,17 +105,17 @@ justify-content: space-between;
 
 h3{
 line-height: 4rem;
-font-size: 1.4rem;
+font-size: 1.2rem;
 }
 
 p{
 line-height: 4rem;
-font-size:1.3rem;
+font-size:1.1rem;
 }
 
 @media screen and (max-width:768px) {
         h3{
-        line-height: 4rem;
+        line-height: 2rem;
         font-size: 1rem;
         }
         display: block;

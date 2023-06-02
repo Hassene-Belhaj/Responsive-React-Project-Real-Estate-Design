@@ -6,6 +6,8 @@ import {AiOutlineArrowLeft} from 'react-icons/Ai'
 export const Container = styled.div`
 width: 100%;
 height: 100vh;
+@media screen and (max-width:768px) {
+}
 ` 
 
 export const ContainerSlider = styled.div`

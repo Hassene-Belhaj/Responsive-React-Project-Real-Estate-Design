@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-width: 100%;
-height: 100vh;
-margin-top: 5rem;
-margin-bottom: 5rem;
+width: 80%;
+height: 100%;
+margin: 5rem auto;
+padding-top: 2rem;
 @media screen and (max-width : 768px) {
+display: block;
 }
 `
 
@@ -13,15 +14,15 @@ export const GridContainer = styled.div`
 margin-top: 5rem;
 margin-left: auto;
 margin-right: auto;
-width: 80%;
+width: 100%;
 height: 100%;
-display:grid;
+display:flex;
+justify-content: center;
+align-items: center;
 background: #fff;
-grid-template-columns: 50% 50%;
-grid-template-rows: 100%;
 gap: 2rem;
 @media screen and (max-width :768px){
-grid-template-columns    :100%;
+display: block;
 
 }
 `

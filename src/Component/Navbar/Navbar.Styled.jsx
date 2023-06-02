@@ -8,7 +8,7 @@ export const Nav = styled.nav`
 width: 100%;
 height: 100%;
 position: relative;
-z-index: 700;
+z-index: 9000;
 `
 
 

@@ -1,7 +1,7 @@
 export const MenuData = [
-    {title : 'About', link :'/about'},
-    {title : 'Homes', link :'/homes'},
-    {title : 'Rentals', link :'/rental'},
+    {title : 'Buy', link :'/about'},
+    {title : 'Rent', link :'/homes'},
+    {title : 'Sell', link :'/rental'},
 ]
 
 export const PhotoSectionData = [
