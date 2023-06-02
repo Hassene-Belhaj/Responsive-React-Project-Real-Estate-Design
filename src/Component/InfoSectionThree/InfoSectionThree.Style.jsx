@@ -42,6 +42,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
+padding-top: 7rem;
+padding-left: 5rem;
 font-size: 1.2rem;
 h3{
     color: #000;
@@ -49,9 +51,7 @@ h3{
 p{
     padding-top: 1.2rem;
 }
-/* @media screen and (max-width:768px){
-    padding-top: 8rem;
-} */
+
 `
 export const RightColumn = styled.div`
 width: 100%;

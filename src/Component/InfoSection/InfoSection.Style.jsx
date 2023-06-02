@@ -5,9 +5,9 @@ width: 80%;
 height: 100%;
 margin: 5rem auto;
 padding-top: 2rem;
-@media screen and (max-width : 768px) {
+/* @media screen and (max-width : 768px) {
 display: block;
-}
+} */
 `
 
 export const GridContainer = styled.div`

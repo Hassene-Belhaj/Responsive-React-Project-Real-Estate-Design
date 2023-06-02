@@ -10,7 +10,7 @@ const Hero = ({SliderData}) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      nextSlide()
+    nextSlide()
     }, 2600)
  
     return () => clearTimeout(timeout)
@@ -22,14 +22,12 @@ const Hero = ({SliderData}) => {
 
 const prevSlide = () => {
   const isFirstSlide = currentIndex === 0;
-  const newIndex = isFirstSlide ? SliderData.length - 1 : currentIndex - 1;
-  setCurrentIndex(newIndex);
+  setCurrentIndex( isFirstSlide ? SliderData.length - 1 : currentIndex - 1)
 };
 
 const nextSlide = () => {
   const isLastSlide = currentIndex === SliderData.length - 1;
-  const newIndex = isLastSlide ? 0 : currentIndex + 1;
-  setCurrentIndex(newIndex);
+  setCurrentIndex(isLastSlide ? 0 : currentIndex + 1)
 };
 
 
