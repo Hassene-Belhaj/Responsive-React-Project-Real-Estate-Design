@@ -1,10 +1,18 @@
 import React from 'react'
 import { Container, GridContainer, LeftColmun, RightColmun, Span, TitleDiv } from './InfoSectionTwo.Style'
 import { Button } from '../../Button/Button.Style'
+import { motion } from 'framer-motion'
+
 
 const InfoSectionTwo = () => {
   return (
-    <Container >
+      
+      <Container>
+            <motion.div 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+            >
         <GridContainer>
             <LeftColmun>
                 <img src={'/images/home1.jpg'} alt="" />
@@ -26,6 +34,7 @@ const InfoSectionTwo = () => {
             </RightColmun>
 
         </GridContainer>
+     </motion.div>
     </Container>
     )
 }

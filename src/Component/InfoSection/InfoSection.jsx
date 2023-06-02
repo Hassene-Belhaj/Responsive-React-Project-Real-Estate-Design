@@ -13,21 +13,20 @@ const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}
     })
 
     const animation = useAnimation()
-
-
-
+  
+   
  useEffect(()=> {
     if(inView ) {
      animation.start({
         x:0,
         transition:{
-            type:'spring' , duration :2, bounce : 0.3 ,
+            type:'spring' , duration :2, bounce : 0.3 ,opacity :1,
         }
      })
-    } else if(!inView) {
+    } else {
         animation.start({
-            x: '100vw'
-            
+            opacity : 1,
+            x: '100%'        
         })
     }
  },[inView])

@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react'
 import {Container, ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
 from './Hero.Style'
 import { Button } from '../../Button/Button.Style'
+import { motion } from 'framer-motion'
 
 const Hero = ({SliderData}) => {
 
@@ -10,7 +11,7 @@ const Hero = ({SliderData}) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-    nextSlide()
+      nextSlide()
     }, 2600)
  
     return () => clearTimeout(timeout)
@@ -32,6 +33,11 @@ const nextSlide = () => {
 
 
   return (
+    <motion.div
+    initial={{width : 0}}
+    animate={{width : "100vw",transition:{duration : 0.2}}}
+    exit={{x: "100%"}}
+    >  
     <Container>
       <ContainerSlider img={`url(${SliderData[currentIndex].image})`}>
          <NextBtn> 
@@ -48,6 +54,7 @@ const nextSlide = () => {
            </TextHero>
       </ContainerSlider>
     </Container>
+  </motion.div>
   )
 }
 
