@@ -9,26 +9,41 @@ import { useInView } from 'react-intersection-observer'
 const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}) => {
 
     const {ref,inView} = useInView({
-        threshold: 0.2
+        threshold: 0
     })
 
     const animation = useAnimation()
   
    
  useEffect(()=> {
-    if(inView ) {
-     animation.start({
-        x:0,
-        transition:{
-            type:'spring' , duration :2, bounce : 0.3 ,opacity :1,
-        }
-     })
-    } else {
-        animation.start({
-            opacity : 1,
-            x: '100%'        
-        })
-    }
+
+   if(inView){
+    animation.start({
+        opacity : 1 ,
+        transition : {
+            duration : 0.8 ,
+            delay : 0.35 ,
+        } 
+    })
+   } else {
+    animation.start({
+        opacity : 0.7 ,
+    })
+   }
+
+    // if(inView ) {
+    //  animation.start({
+    //     x:0,
+    //     transition:{
+    //         type:'spring' , duration :2, bounce : 0.3 ,opacity :0.8,
+    //     }
+    //  })
+    // } else {
+    //     animation.start({
+    //         opacity : 1,
+    //         x: '100vw'        
+    //     })
+    // }
  },[inView])
 
     return (

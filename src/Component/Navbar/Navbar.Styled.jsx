@@ -92,7 +92,7 @@ margin-right: 2rem;
 export const SmContainer =styled.div`
 display: none;
 @media screen and (max-width:768px) {
-    display: block ;
+    display: flex ;
     width:100%;
     height:${({toggle})=>(toggle ?  "100vh" : 0)} ; 
     background:#CB853F;

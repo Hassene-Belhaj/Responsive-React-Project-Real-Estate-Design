@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer'
 const PhotoSection = ({PhotoSectionData}) => {
 
   const {ref,inView} = useInView({
-    threshold: 0.2
+    threshold: 0.1
 })
 
 const animation = useAnimation()
@@ -18,13 +18,14 @@ useEffect(()=> {
 if(inView ) {
  animation.start({
     x:0,
+    opacity : 1  ,
     transition:{
-        type:'spring' , duration :2, bounce : 0.3 ,opacity :1,
+        type:'spring' , duration :2.5, bounce : 0.3,
     }
  })
 } else {
     animation.start({
-        opacity : 1,
+        opacity : 0.5,
         x: '-100%'        
     })
 }

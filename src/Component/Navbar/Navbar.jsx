@@ -51,7 +51,7 @@ useEffect(()=>{
 
         <NavButton marginR={"2rem"}>
          
-            <Button  color={color ? 1: 0}  background={color ? 1: 0 }padding={"0.6rem 1.6rem"} 
+            <Button  color={color ? 1: 0}  background={color ? 1: 0 } padding={"0.6rem 1.6rem"} 
             >Contact Us</Button>
        </NavButton> 
 
