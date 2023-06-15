@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer'
 const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}) => {
 
     const {ref,inView} = useInView({
-        threshold: 0
+        // threshold: 0
     })
 
     const animation = useAnimation()
@@ -18,17 +18,9 @@ const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}
  useEffect(()=> {
 
    if(inView){
-    animation.start({
-        opacity : 1 ,
-        transition : {
-            duration : 0.8 ,
-            delay : 0.35 ,
-        } 
-    })
+    animation.start('visible')
    } else {
-    animation.start({
-        opacity : 0.7 ,
-    })
+    animation.start('hidden')
    }
 
     // if(inView ) {
@@ -47,25 +39,46 @@ const InfoSection = ({heading,paragraphone,paragraphtwo,buttonlabel,image,order}
  },[inView])
 
     return (
-    <Container  ref={ref} >
-          <motion.div
-          animate={animation}
-     
-          >
-       <GridContainer >
-        
-   
+
+    <Container ref={ref}  >     
+       <GridContainer  >
+
        <LeftColumn order={order ? 1 : 0}>
+         <motion.div 
+           variants={{
+               hidden : {opacity : 0, x : order? "-100%" : "100%" } ,
+               visible :{opacity : 1 , x : 0 }            
+            }}
+          animate={animation}
+          transition={{
+            duration : 0.3
+
+            }} 
+            
+            
+            >
+
         <h2>{heading}</h2>
          <p>{paragraphone}</p>
          <Button background={true} color="true" padding={"1rem 2rem"} marginT={"2rem"} marginB={"2rem"}>View Homes</Button>
+         </motion.div>
        </LeftColumn>
 
         <RightColumn order={order ? 1 : 0}>
-            <img src={image} alt="" />
+            <motion.img
+                 variants={{
+                     hidden : {opacity : 0 , x : order ? "100%" : "-100%" } ,
+                     visible :{opacity : 1 , x : 0 }            
+                  }}
+                  animate={animation}
+                  transition={{
+                    duration : 0.5
+                    }} 
+                    
+                    
+                    src={image} alt="" />
         </RightColumn>
        </GridContainer>
-     </motion.div>
     </Container>
         )
 }

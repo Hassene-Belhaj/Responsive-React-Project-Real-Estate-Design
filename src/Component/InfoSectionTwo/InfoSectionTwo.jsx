@@ -1,21 +1,40 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container, GridContainer, LeftColmun, RightColmun, Span, TitleDiv } from './InfoSectionTwo.Style'
 import { Button } from '../../Button/Button.Style'
-import { motion } from 'framer-motion'
+import { motion,useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 
 const InfoSectionTwo = () => {
+ const {inView,ref} = useInView()
+ const animation = useAnimation()
+
+useEffect(()=>{
+if(inView) {
+    animation.start('visible')
+} else {
+   animation.start('hidden') 
+}
+},[inView])
+
   return (
       
-      <Container>
-            <motion.div 
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-            >
+      <Container ref={ref}>
+            <motion.div>
         <GridContainer>
             <LeftColmun>
-                <img src={'/images/home1.jpg'} alt="" />
+                <motion.img 
+                   variants={{
+                    hidden : {opacity : 0  , scale : 0} ,
+                    visible : {opacity : 1 , scale : 1 }
+                   }}
+                   animate={animation}
+                   transition={{
+                     duration : 0.5
+                   }}
+                
+                
+                src={'/images/home1.jpg'} alt="" />
                <TitleDiv>
                 <h3>8 bed 10 bath house in venice , california</h3>
                </TitleDiv>
@@ -24,7 +43,18 @@ const InfoSectionTwo = () => {
                </Span>
             </LeftColmun>
             <RightColmun>
-                <img src={'/images/home2.jpg'} alt="" />
+                <motion.img 
+                   variants={{
+                    hidden : {opacity : 0  , scale : 0} ,
+                    visible : {opacity : 1 , scale : 1 }
+                   }}
+                   animate={animation}
+                   transition={{
+                     duration : 0.5
+                   }}
+                
+                
+                src={'/images/home2.jpg'} alt="" />
                 <TitleDiv>
                 <h3>4 bed 2 bath house in miami , florida</h3>
                </TitleDiv>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -35,7 +36,7 @@ margin: auto;
     display: block;
 }
 `
-export const LeftColumn = styled.div`
+export const LeftColumn = styled(motion.div)`
 width: 100%;
 height: 100%;
 display: flex;
