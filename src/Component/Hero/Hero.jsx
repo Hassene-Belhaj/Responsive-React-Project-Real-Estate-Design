@@ -2,12 +2,12 @@ import React, {useEffect, useState } from 'react'
 import {Container, ContainerSlider, NextBtn, NextSlide, PrevBtn, PrevSlide, TextHero,} 
 from './Hero.Style'
 import { Button } from '../../Button/Button.Style'
-import { motion } from 'framer-motion'
+import { motion} from 'framer-motion'
 
 const Hero = ({SliderData}) => {
 
 
-  const [currentIndex,setCurrentIndex] = useState(0)
+  const [index,setIndex] = useState(0)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -16,30 +16,40 @@ const Hero = ({SliderData}) => {
  
     return () => clearTimeout(timeout)
     
-}, [currentIndex])
+}, [index])
 
 
 
 
 const prevSlide = () => {
-  const isFirstSlide = currentIndex === 0;
-  setCurrentIndex( isFirstSlide ? SliderData.length - 1 : currentIndex - 1)
+  const curr = index === 0;
+  setIndex( curr ? SliderData.length - 1 : index - 1)
 };
 
 const nextSlide = () => {
-  const isLastSlide = currentIndex === SliderData.length - 1;
-  setCurrentIndex(isLastSlide ? 0 : currentIndex + 1)
+  const curr = index === SliderData.length - 1;
+  setIndex(curr ? 0 : index + 1)
 };
 
 
   return (
-    <motion.div
-    initial={{width : 0}}
-    animate={{width : "100vw",transition:{duration : 0.2}}}
-    exit={{x: "100%"}}
-    >  
+   
     <Container>
-      <ContainerSlider img={`url(${SliderData[currentIndex].image})`}>
+      <ContainerSlider> 
+         <motion.img 
+         variants={{
+          hidden : {opacity : 0 , x : 500} ,
+          visible : {opacity : 1 , x : 0}
+         }}
+         initial='hidden'
+         animate='visible'
+         transition={{
+          duration : 0.5 ,
+          type : 'spring' ,
+          bounce : 0.3
+         }}
+         key={SliderData[index].image}
+         src={SliderData[index].image} />
          <NextBtn> 
             <NextSlide onClick={nextSlide} size={40} />
           </NextBtn>
@@ -48,13 +58,12 @@ const nextSlide = () => {
           </PrevBtn>
             
            <TextHero>
-                <h2>{SliderData[currentIndex].title}</h2>
-                <h3>{SliderData[currentIndex].price}</h3>
+                <h2>{SliderData[index].title}</h2>
+                <h3>{SliderData[index].price}</h3>
                 <Button padding={"1rem 2rem"} marginT={"2rem"} marginL={"2rem"}>View Home</Button>
            </TextHero>
       </ContainerSlider>
     </Container>
-  </motion.div>
   )
 }
 

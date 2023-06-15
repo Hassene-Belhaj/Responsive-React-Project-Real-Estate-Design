@@ -1,23 +1,27 @@
 import  styled  from 'styled-components'
 import {AiOutlineArrowRight} from 'react-icons/Ai'
 import {AiOutlineArrowLeft} from 'react-icons/Ai'
+import { motion } from 'framer-motion'
 
 
 export const Container = styled.div`
 width: 100%;
 height: 100vh;
-@media screen and (max-width:768px) {
+` 
+
+export const ContainerSlider = styled(motion.div)`
+width: 100%;
+height: 100%;
+background: #000;
+transition: all 0.3s ease-in-out;
+overflow: hidden;
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 ` 
 
-export const ContainerSlider = styled.div`
-width: 100%;
-height: 100%;
-background-image:${({img})=>img};
-background-position: center;
-background-size: cover;
-transition: all 0.3s ease-in-out;
-` 
 
 
 
